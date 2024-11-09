@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native";
+import { FlatList, ScrollView, View } from "react-native";
 import { MessagesContainer } from "./MessagesContainer";
 import { InputMessages } from "./InputMessages";
 import { useThemeColor } from "@/hooks/useThemeColor";
@@ -16,25 +16,24 @@ export const ContainerMessages = () => {
   const [inputMessage, setInputMessage] = useState("");
   return (
     <View style={{ flex: 1 }}>
-      <ScrollView
-        style={{ flex: 1 }}
+      <FlatList
+        style={{ flex: 1, paddingBottom: 100 }}
         contentContainerStyle={{
           justifyContent: "flex-end",
           alignItems: "center",
-          flex: 1,
           backgroundColor: backgroundColor,
+          flexDirection: 'column-reverse',
         }}
-      >
-        {messages.map((message, index) => {
-          return (
-            <MessagesContainer
-              key={index}
-              message={message}
-              isSendMessages={messages.uid === user?.uid}
-            />
-          );
-        })}
-      </ScrollView>
+        inverted
+        data={messages}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => (
+          <MessagesContainer
+            message={item}
+            isSendMessages={item.uid === user?.uid}
+          />
+        )}
+      />
       <InputMessages
         message={inputMessage}
         setMessages={setInputMessage}
