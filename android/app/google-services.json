@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "651068465170",
+    "project_id": "nextchatfirebase",
+    "storage_bucket": "nextchatfirebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651068465170:android:d05e69ed61e4b7e34d38cb",
+        "android_client_info": {
+          "package_name": "com.superchat.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651068465170-6e7fvhfpf90nk7uvomf6anfud378lo9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkw6Jl5USUZWWqEuVmF4_u5iCWTJ4vrT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651068465170-6e7fvhfpf90nk7uvomf6anfud378lo9b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "651068465170-gdfidg71e1stp4d5tt0dstb8lcpjmiat.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.superchat.firebase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
